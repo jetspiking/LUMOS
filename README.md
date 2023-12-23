@@ -38,33 +38,67 @@ Sandboxing: Run the layout parser in a sandbox environment. This restricts the p
 Validation and Sanitization: Implement strict validation of the layout files. Ensure that all input conforms to the expected format and sanitize it to remove potential exploits.
 
 ```xml
-<view id="musicPlayerView" value="musicPlayerBackgroundResource" actions="click">
-  <menu id="navigationMenu" type="navigation" emphasis="high" actions="click" value="Music, Videos, Podcasts, Radio, Marketplace"/>
+<view id="musicPlayerView" background="musicPlayerBackgroundResource" actions="click">
+  <menu id="navigationMenu" type="navigation" emphasis="high" actions="click">
+    <content>
+      <item value="Music"/>
+      <item value="Videos"/>
+      <item value="Podcasts"/>
+      <item value="Radio"/>
+      <item value="Marketplace"/>
+    </content>
+  </menu>
   <list id="songList" emphasis="low" actions="click">
-    <item pos="0,0">
-      <value>Song Title 1</value>
-      <button id="playSong1" emphasis="low" actions="click" value="►"/>
-    </item>
-    <item pos="1,0">
-      <value>Song Title 2</value>
-      <button id="playSong2" emphasis="low" actions="click" value="►"/>
-    </item>
-    <item pos="2,0">
-      <value>Song Title 3</value>
-      <button id="playSong3" emphasis="low" actions="click" value="►"/>
-    </item>
+    <content>
+      <item pos="0,0">
+        <value>Song Title 1</value>
+        <button id="playSong1" emphasis="low" actions="click" value="►"/>
+      </item>
+      <item pos="1,0">
+        <value>Song Title 2</value>
+        <button id="playSong2" emphasis="low" actions="click" value="►"/>
+      </item>
+      <item pos="2,0">
+        <value>Song Title 3</value>
+        <button id="playSong3" emphasis="low" actions="click" value="►"/>
+      </item>
+    </content>
   </list>
 </view>
 
 <button id="submitBtn" emphasis="high" actions="click" value="Submit"/>
 <label id="infoLabel" emphasis="low" actions="" value="Information"/>
 <edittext id="usernameField" emphasis="high" actions="input" value="Enter Username"/>
-<checkbox id="agreeCheck" emphasis="low" actions="change" value="Agree to Terms"/>
+<checkbox id="agreeCheck" emphasis="low" actions="change" value="true"/>
 <radiobutton id="optionOne" emphasis="low" group="optionsGroup" actions="select" value="Option One"/>
 <image id="logoImg" emphasis="high" actions="" value="logoImageResource"/>
-<slider id="volumeControl" emphasis="low" actions="slide" value="0,100,50"/>
+<slider id="volumeControl" emphasis="low" actions="slide" value="50"/>
 <switch id="toggleSwitch" emphasis="low" actions="toggle" value="false"/>
-<dropdown id="countrySelect" emphasis="high" actions="select" value="USA, Canada, UK"/>
-<menu id="mainMenu" type="navigation" emphasis="high" actions="click" value="Home, About, Contact"/>
-<list id="itemList" emphasis="low" actions="select" value="List Item 1, List Item 2, List Item 3"/>
-<grid id="layoutGrid" emphasis="high" actions="" value="Grid Item 1, Grid Item 2"/>
+<dropdown id="countrySelect" emphasis="high" actions="select">
+  <content>
+    <option value="USA"/>
+    <option value="Canada"/>
+    <option value="UK"/>
+  </content>
+</dropdown>
+<menu id="mainMenu" type="navigation" emphasis="high" actions="click">
+  <content>
+    <item value="Home"/>
+    <item value="About"/>
+    <item value="Contact"/>
+  </content>
+</menu>
+<list id="itemList" emphasis="low" actions="select">
+  <content>
+    <item value="List Item 1"/>
+    <item value="List Item 2"/>
+    <item value="List Item 3"/>
+  </content>
+</list>
+<grid id="layoutGrid" emphasis="high" actions="">
+  <content>
+    <item pos="0,0" value="Grid Item 1"/>
+    <item pos="1,0" value="Grid Item 2"/>
+  </content>
+</grid>
+

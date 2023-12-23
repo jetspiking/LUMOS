@@ -75,30 +75,22 @@ Validation and Sanitization: Implement strict validation of the layout files. En
 <slider id="volumeControl" emphasis="low" actions="slide" value="50"/>
 <switch id="toggleSwitch" emphasis="low" actions="toggle" value="false"/>
 <dropdown id="countrySelect" emphasis="high" actions="select">
-  <content>
-    <option value="USA"/>
-    <option value="Canada"/>
-    <option value="UK"/>
-  </content>
+  <option value="USA"/>
+  <option value="Canada"/>
+  <option value="UK"/>
 </dropdown>
-<menu id="mainMenu" type="navigation" emphasis="high" actions="click">
-  <content>
-    <item value="Home"/>
-    <item value="About"/>
-    <item value="Contact"/>
-  </content>
+<menu id="mainMenu" type="navigation" emphasis="high">
+  <item value="Home" actions="select"/>
+  <item value="About" actions="select"/>
+  <item value="Contact" actions="select"/>
 </menu>
 <list id="itemList" emphasis="low" actions="select">
-  <content>
-    <item value="List Item 1"/>
-    <item value="List Item 2"/>
-    <item value="List Item 3"/>
-  </content>
+  <item value="List Item 1"/>
+  <item value="List Item 2"/>
+  <item value="List Item 3"/>
 </list>
 <grid id="layoutGrid" emphasis="high" actions="">
-  <content>
-    <item pos="0,0" value="Grid Item 1"/>
-    <item pos="1,0" value="Grid Item 2"/>
-  </content>
+  <item pos="0,0" value="Grid Item 1"/>
+  <item pos="1,0" value="Grid Item 2"/>
 </grid>
 

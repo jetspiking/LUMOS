@@ -2,17 +2,22 @@
 LUMOS Unified Modern Operating System
 
 User Space:
-  Filesystem Manager
+- Filesystem Manager
+
 Interface Space:
-  UI Catalyst Runtime
+- UI Catalyst Runtime
+
 Package Space:
-  Package Manager
+- Package Manager
+
 Security Space:
-  Permission Manager
-  Security Components (e.g., for user authentication, access control)
+- Permission Manager
+- Security Components (e.g., for user authentication, access control)
+
 Driver Space:
-  Device Drivers
+- Device Drivers
+
 Kernel Space:
-  Linux Kernel
+- Linux Kernel
 
 Applications: .los extension.

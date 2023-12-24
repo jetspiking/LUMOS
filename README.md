@@ -120,6 +120,7 @@ System Implementation
     - For Rust or Julia, you would interface with the Linux kernel using their respective FFI (Foreign Function Interface) features.
     - You would also need to create a set of daemons or services running with higher privileges that manage app lifecycles, permissions, and inter-app communication.
 
+```
 +--------------------------------------------------+
 |                     LUMOS OS                     |
 | +----------------------------------------------+ |
@@ -155,5 +156,5 @@ System Implementation
 | | | and drivers for hardware interaction.    | | |
 | | +------------------------------------------+ | |
 +--------------------------------------------------+
-
+```
 

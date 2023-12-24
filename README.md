@@ -72,6 +72,7 @@ Validation and Sanitization: Implement strict validation of the layout files. En
 <image id="logoImg" emphasis="high" actions="" value="logoImageResource"/>
 <slider id="volumeControl" emphasis="low" actions="slide" value="50"/>
 <switch id="toggleSwitch" emphasis="low" actions="toggle" value="false"/>
+<webview id="webView" emphasis="high"/>
 <dropdown id="countrySelect" emphasis="high" actions="select">
   <option value="USA"/>
   <option value="Canada"/>

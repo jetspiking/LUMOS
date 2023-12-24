@@ -23,8 +23,6 @@ Kernel Space:
 Applications: .los extension.
 
 
-
-
 # UI Catalyst Engine
 
 To ensure security while allowing flexibility in swapping the User Interface Layout System:
@@ -158,3 +156,5 @@ System Implementation
 +--------------------------------------------------+
 ```
 
+# Apps
+Reference applications by their AUID (Application Unique Identifier). Delegate all calls from UI Catalyst Engine (/ Runtime) to entry point Act(String id, String action). "id" would be control identifier, while "action" could describe "mouseDown", "onEnter", etc.

@@ -1,5 +1,5 @@
 # LUMOS
-LUMOS Unified Modern Operating System
+LUMOS Unified Modular Operating System
 
 User Space:
 - Filesystem Manager

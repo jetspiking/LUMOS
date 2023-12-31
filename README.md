@@ -35,6 +35,9 @@ Sandboxing: Run the layout parser in a sandbox environment. This restricts the p
 
 Validation and Sanitization: Implement strict validation of the layout files. Ensure that all input conforms to the expected format and sanitize it to remove potential exploits.
 
+# Window Manager
+Write own window manager that supports different layouts (created by DSL from UI Catalyst Engine). Window manager would support running applications like angelfish (lightweight browser) or other Linux applications after enabling developer mode.
+
 # CellGUI
 Format and user interface editor. How all elements look is decided by the UI Catalyst Engine. CellGUI contains the following elements:
 - Label

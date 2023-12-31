@@ -35,6 +35,11 @@ Sandboxing: Run the layout parser in a sandbox environment. This restricts the p
 
 Validation and Sanitization: Implement strict validation of the layout files. Ensure that all input conforms to the expected format and sanitize it to remove potential exploits.
 
+---
+Actions in the user interface are intercepted in the Catalyst Engine. Afterwards the app specific "Act" function in .NET is called with "uid" (unique identifier of the user interface element) and "event" (name of the event).
+The UI Catalyst Engine requires applications to implement this Act function. On initialization the Act function would be called with uid ("uid") and event ("init").
+Programatically, UI-elements and content needs to be adjusted or set to specific values. Application requires a way to communicate with the UI Catalyst Engine to adjust these values.
+
 # Window Manager
 Write own window manager that supports different layouts (created by DSL from UI Catalyst Engine). Window manager would support running applications like angelfish (lightweight browser) or other Linux applications after enabling developer mode.
 

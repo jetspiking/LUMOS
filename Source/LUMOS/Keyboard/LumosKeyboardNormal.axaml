@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LUMOS.UICat.Keyboard.LumosKeyboardNormal" Focusable="False">
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="#0B0B0D"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Width" Value="50"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="Margin" Value="1"/>
+			<Setter Property="Focusable" Value="False"/>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Opacity" Value="0.6"/>
+			<Setter Property="Background" Value="#707070"/>
+		</Style>
+	</UserControl.Styles>
+	<StackPanel Name="Keys" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<!-- First row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="KeyQ" Content="q" Click="OnKeyPress"/>
+			<Button Name="KeyW" Content="w" Click="OnKeyPress"/>
+			<Button Name="KeyE" Content="e" Click="OnKeyPress"/>
+			<Button Name="KeyR" Content="r" Click="OnKeyPress"/>
+			<Button Name="KeyT" Content="t" Click="OnKeyPress"/>
+			<Button Name="KeyY" Content="y" Click="OnKeyPress"/>
+			<Button Name="KeyU" Content="u" Click="OnKeyPress"/>
+			<Button Name="KeyI" Content="i" Click="OnKeyPress"/>
+			<Button Name="KeyO" Content="o" Click="OnKeyPress"/>
+			<Button Name="KeyP" Content="p" Click="OnKeyPress"/>
+		</StackPanel>
+
+		<!-- Second row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="KeyA" Content="a" Click="OnKeyPress"/>
+			<Button Name="KeyS" Content="s" Click="OnKeyPress"/>
+			<Button Name="KeyD" Content="d" Click="OnKeyPress"/>
+			<Button Name="KeyF" Content="f" Click="OnKeyPress"/>
+			<Button Name="KeyG" Content="g" Click="OnKeyPress"/>
+			<Button Name="KeyH" Content="h" Click="OnKeyPress"/>
+			<Button Name="KeyJ" Content="j" Click="OnKeyPress"/>
+			<Button Name="KeyK" Content="k" Click="OnKeyPress"/>
+			<Button Name="KeyL" Content="l" Click="OnKeyPress"/>
+			<Button Name="KeyBackSpace" Content="⌫" Click="OnKeyPress"/>
+		</StackPanel>
+
+		<!-- Third row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="FnShift" Content="⇪" Click="OnKeyPress"/>
+			<Button Name="KeyZ" Content="z" Click="OnKeyPress"/>
+			<Button Name="KeyX" Content="x" Click="OnKeyPress"/>
+			<Button Name="KeyC" Content="c" Click="OnKeyPress"/>
+			<Button Name="KeyV" Content="v" Click="OnKeyPress"/>
+			<Button Name="KeyB" Content="b" Click="OnKeyPress"/>
+			<Button Name="KeyN" Content="n" Click="OnKeyPress"/>
+			<Button Name="KeyM" Content="m" Click="OnKeyPress"/>
+			<Button Name="KeyEnter" Content="⏎" Width="102" Click="OnKeyPress"/>
+		</StackPanel>
+
+		<!-- Fourth row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="FnNumeric" Content="123" Click="OnKeyPress"/>
+			<Button Name="FnEmoticons" Content=":-)" Click="OnKeyPress"/>
+			<Button Name="KeySpace" Content="Space" Width="258" Click="OnKeyPress"/>
+			<Button Name="KeyComma" Content="," Click="OnKeyPress"/>
+			<Button Name="KeyPeriod" Content="." Click="OnKeyPress"/>
+			<Button Name="KeyDelete" Content="⌦" Click="OnKeyPress"/>
+		</StackPanel>
+	</StackPanel>
+</UserControl>

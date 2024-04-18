@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:LUMOS.UICat.Views"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        x:Class="LUMOS.UICat.Views.CoreView"
+        Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+	<DockPanel Name="ContentDock" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+		<Grid Name="LumosNavigation" HorizontalAlignment="Stretch" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Height="64"/>
+		<Grid DockPanel.Dock="Top" HorizontalAlignment="Stretch"  VerticalAlignment="Top" >
+			<Grid Name="LumosNotifications" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="32"/>
+			<Grid Name="LumosSearch" IsVisible="False" Opacity="1" Height="64" HorizontalAlignment="Stretch"  VerticalAlignment="Top"/>
+		</Grid>
+		
+		<Grid>
+			<Grid Name="LumosContent" HorizontalAlignment="Stretch" />
+			<Grid Name="LumosOverlay" Background="Black" IsVisible="False" Opacity=".95" HorizontalAlignment="Stretch" />
+			<Grid Name="LumosKeyboard" Background="Black" Opacity=".9" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"></Grid>
+			<Grid Name="LumosFullscreen" Background="Black" IsVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+		</Grid>
+	</DockPanel>
+</UserControl>

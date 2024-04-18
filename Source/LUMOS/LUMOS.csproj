@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<OutputType>WinExe</OutputType>
+		<PublishReadyToRun>true</PublishReadyToRun>
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+		<ApplicationIcon>Assets\lumos.ico</ApplicationIcon>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\**" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Remove="Assets\app-camera.png" />
+		<None Remove="Assets\app-terminal.png" />
+		<None Remove="Assets\boot0.png" />
+		<None Remove="Assets\boot1.png" />
+		<None Remove="Assets\boot10.png" />
+		<None Remove="Assets\boot11.png" />
+		<None Remove="Assets\boot12.png" />
+		<None Remove="Assets\boot13.png" />
+		<None Remove="Assets\boot14.png" />
+		<None Remove="Assets\boot15.png" />
+		<None Remove="Assets\boot16.png" />
+		<None Remove="Assets\boot17.png" />
+		<None Remove="Assets\boot18.png" />
+		<None Remove="Assets\boot19.png" />
+		<None Remove="Assets\boot2.png" />
+		<None Remove="Assets\boot3.png" />
+		<None Remove="Assets\boot4.png" />
+		<None Remove="Assets\boot5.png" />
+		<None Remove="Assets\boot6.png" />
+		<None Remove="Assets\boot7.png" />
+		<None Remove="Assets\boot8.png" />
+		<None Remove="Assets\boot9.png" />
+		<None Remove="Assets\lumos.ico" />
+		<None Remove="Assets\navigation-home.png" />
+		<None Remove="Assets\navigation-previous.png" />
+		<None Remove="Assets\navigation-search.png" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Content Include="Assets\lumos.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
+		<PackageReference Include="Avalonia.LinuxFramebuffer" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10" />
+		<PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
+		<!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
+		<PackageReference Include="Projektanker.Icons.Avalonia" Version="9.3.0" />
+		<PackageReference Include="Projektanker.Icons.Avalonia.FontAwesome" Version="9.3.0" />
+	</ItemGroup>
+</Project>

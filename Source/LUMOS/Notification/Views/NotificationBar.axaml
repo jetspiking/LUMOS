@@ -1,0 +1,10 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Margin="10,0,10,5" VerticalAlignment="Bottom"
+             x:Class="LUMOS.Notification.Views.NotificationBar">
+	<DockPanel Name="NotificationDock" HorizontalAlignment="Stretch">
+		<Label Name="TimeLabel" Margin="10,0,10,0" DockPanel.Dock="Right" Foreground="White" HorizontalAlignment="Right"/>
+	</DockPanel>
+</UserControl>

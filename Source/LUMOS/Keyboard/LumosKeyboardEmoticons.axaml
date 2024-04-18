@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LUMOS.UICat.Keyboard.LumosKeyboardEmoticons" Focusable="False">
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="#0B0B0D"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Width" Value="50"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="Margin" Value="1"/>
+			<Setter Property="Focusable" Value="False"/>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Opacity" Value="0.6"/>
+			<Setter Property="Background" Value="#707070"/>
+		</Style>
+	</UserControl.Styles>
+	<StackPanel Name="Keys" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="FnNormal" Content="abc" Click="OnKeyPress"/>
+			<Button Name="EmoticonHappy" Content=":-)" Click="OnKeyPress"/>
+			<Button Name="EmoticonSad" Content=":-(" Click="OnKeyPress"/>
+			<Button Name="EmoticonNeutral" Content=":-|" Click="OnKeyPress"/>
+			<Button Name="EmoticonWink" Content=";-)" Click="OnKeyPress"/>
+			<Button Name="EmoticonSurprised" Content=":-O" Click="OnKeyPress"/>
+			<Button Name="EmoticonKidding" Content=":-P" Click="OnKeyPress"/>
+			<Button Name="EmoticonAnnoyed" Content=":-/" Click="OnKeyPress"/>
+			<Button Name="EmoticonAngel" Content="O:-)" Click="OnKeyPress"/>
+			<Button Name="EmoticonCool" Content="8-)" Click="OnKeyPress"/>
+		</StackPanel>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,79 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LUMOS.UICat.Keyboard.LumosKeyboardNumeric" Focusable="False">
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="#0B0B0D"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Width" Value="50"/>
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="Margin" Value="1"/>
+			<Setter Property="Focusable" Value="False"/>
+		</Style>
+		<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Opacity" Value="0.6"/>
+			<Setter Property="Background" Value="#707070"/>
+		</Style>
+	</UserControl.Styles>
+	<StackPanel Name="Keys" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<!-- First row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="Key1" Content="1" Click="OnKeyPress"/>
+			<Button Name="Key2" Content="2" Click="OnKeyPress"/>
+			<Button Name="Key3" Content="3" Click="OnKeyPress"/>
+			<Button Name="Key4" Content="4" Click="OnKeyPress"/>
+			<Button Name="Key5" Content="5" Click="OnKeyPress"/>
+			<Button Name="Key6" Content="6" Click="OnKeyPress"/>
+			<Button Name="Key7" Content="7" Click="OnKeyPress"/>
+			<Button Name="Key8" Content="8" Click="OnKeyPress"/>
+			<Button Name="Key9" Content="9" Click="OnKeyPress"/>
+			<Button Name="Key0" Content="0" Click="OnKeyPress"/>
+		</StackPanel>
+
+		<!-- Second row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="KeyExplanation" Content="!" Click="OnKeyPress"/>
+			<Button Name="KeyAt" Content="@" Click="OnKeyPress"/>
+			<Button Name="KeyHash" Content="#" Click="OnKeyPress"/>
+			<Button Name="KeyDollars" Content="$" Click="OnKeyPress"/>
+			<Button Name="KeyPercentage" Content="%" Click="OnKeyPress"/>
+			<Button Name="KeyCaret" Content="^" Click="OnKeyPress"/>
+			<Button Name="KeyAmpersand" Content="&amp;" Click="OnKeyPress"/>
+			<Button Name="KeyAsterisk" Content="*" Click="OnKeyPress"/>
+			<Button Name="KeyParenthesisOpen" Content="(" Click="OnKeyPress"/>
+			<Button Name="KeyParenthesisClose" Content=")" Click="OnKeyPress"/>
+		</StackPanel>
+
+		<!-- Third row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="KeyHyphen" Content="-" Click="OnKeyPress"/>
+			<Button Name="KeyUnderscore" Content="_" Click="OnKeyPress"/>
+			<Button Name="KeyEquals" Content="=" Click="OnKeyPress"/>
+			<Button Name="KeyPlus" Content="+" Click="OnKeyPress"/>
+			<Button Name="KeyLessThan" Content="&lt;" Click="OnKeyPress"/>
+			<Button Name="KeyGreaterThan" Content="&gt;" Click="OnKeyPress"/>
+			<Button Name="KeyBracketOpen" Content="[" Click="OnKeyPress"/>
+			<Button Name="KeyBracketClose" Content="]" Click="OnKeyPress"/>
+			<Button Name="KeyCurlyBraceOpen" Content="\{" Click="OnKeyPress"/>
+			<Button Name="KeyCurlyBraceClose" Content="}" Click="OnKeyPress"/>
+		</StackPanel>
+
+		<!-- Fourth row -->
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Name="FnNormal" Content="abc" Click="OnKeyPress"/>
+			<Button Name="KeyAccentGrave" Content="`" Click="OnKeyPress"/>
+			<Button Name="KeyTilde" Content="~" Click="OnKeyPress"/>
+			<Button Name="KeyApostrophe" Content="&apos;" Click="OnKeyPress"/>
+			<Button Name="KeyQuotation" Content="&quot;" Click="OnKeyPress"/>
+			<Button Name="KeySolidus" Content="/" Click="OnKeyPress"/>
+			<Button Name="KeyVerticalLine" Content="|" Click="OnKeyPress"/>
+			<Button Name="KeyQuestion" Content="?" Click="OnKeyPress"/>
+			<Button Name="FnHide" Content="↓" Width="102" Click="OnKeyPress"/>
+		</StackPanel>
+	</StackPanel>
+</UserControl>

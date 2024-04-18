@@ -54,13 +54,6 @@ namespace LUMOS.Misc
             process.Start();
             process.BeginOutputReadLine();
             process.BeginErrorReadLine();
-
-            // You can provide an input to the process like this:
-            // process.StandardInput.WriteLine("your input here");
-            // process.StandardInput.Flush();
-
-            // Do not wait for the process to exit.
-            // Return control to the calling method.
         }
 
     }

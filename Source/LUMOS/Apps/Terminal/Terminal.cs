@@ -25,20 +25,14 @@ namespace LUMOS.Apps.Camera
         private Double _windowWidth;
         private Double _windowHeight;
 
+        private DockPanel? _terminalContent;
+
         public Terminal(IDisplayManager displayManager) : base(_icon, _name, _uuid)
         {
             _displayManager = displayManager;
         }
 
         public override void Start()
-        {
-        }
-
-        public override void Stop()
-        {
-        }
-
-        public override List<CatApp> GetApp()
         {
             DockPanel terminalPanel = new()
             {
@@ -74,32 +68,59 @@ namespace LUMOS.Apps.Camera
             terminalPanel.Children.Add(textViewer);
             DockPanel.SetDock(textViewer, Dock.Bottom);
 
-            List<CatApp> contents = new();
-            contents.Add(new(terminalPanel, CatDisplayMode.Primary));
-
             commandBox.KeyDown += (s, e) =>
             {
                 if (e.Key == Avalonia.Input.Key.Enter)
                 {
-                    if (commandBox.Text.ToLower() == _clearWin || commandBox.Text.ToLower() == _clearLin)
+                    String command = commandBox.Text;
+                    commandBox.Text = String.Empty;
+
+                    if (command.ToLower() == _clearWin || command.ToLower() == _clearLin)
                     {
                         outputBlock.Text = String.Empty;
                         return;
                     }
-                    if (commandBox.Text == _lumosExit) Environment.Exit(0);
+                    if (command == _lumosExit) Environment.Exit(0);
 
-                    CommandInvoker.ExecuteCommand(commandBox.Text,
+                    CommandInvoker.ExecuteCommand(command,
                         (s) =>
                         {
-                            Dispatcher.UIThread.Post(() => outputBlock.Text += $"\n{s}");
+                            Dispatcher.UIThread.Post(() =>
+                            {
+                                outputBlock.Text += $"\n{s}";
+                                textViewer.ScrollToEnd();
+                            });
+                            _terminalContent = terminalPanel;
+
                         },
                         (s) =>
                         {
-                            Dispatcher.UIThread.Post(() => outputBlock.Text += $"\n{s}");
+                            Dispatcher.UIThread.Post(() =>
+                            {
+                                outputBlock.Text += $"\n{s}";
+                                textViewer.ScrollToEnd();
+                            });
+                            _terminalContent = terminalPanel;
                         });
                 }
+                _terminalContent = terminalPanel;
             };
 
+            _terminalContent = terminalPanel;
+        }
+
+        public override void Stop()
+        {
+            _terminalContent = null;
+        }
+
+        public override List<CatApp> GetApp()
+        {
+            if (_terminalContent == null)
+                Start();
+
+            List<CatApp> contents = new();
+            contents.Add(new(_terminalContent, CatDisplayMode.Primary));
             return contents;
         }
 

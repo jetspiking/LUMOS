@@ -33,8 +33,8 @@ The application supports two alternative run modes by appending an argument for 
 
 Especially for the ```--drm``` and ```--fsl``` modes it seems appropiate to automatically start the application on after the operating system has booted. This introduced a new edge-case where exiting the application upon maintenance or checks could prove problematic. As an alternative exit mode a terminal command ```LUMOS_EXIT``` was added. This will shutdown the application regardless of the launch argument.
 
-# Content
-Two example applications are included. A boot animation is added as app to display how the API can be used to continuously write updates for displaying the application. The second application is a terminal program that is a suitable example for showing lifecycle management related to opening, hiding or closing the application.
+# Applications
+Two applications are included. A boot animation is added as an app ```Boot```, to display how the API can be used to continuously write updates for displaying the application. The second application is a terminal program ```Terminal``` that is a suitable example for showing lifecycle management related to opening, hiding or closing the application, and interfacing with an API unrelated to LUMOS.
 
 # Architecture
 Originally the idea was to create a microservices architecture communicating via IPC (Named Pipes) for higher maintainability. However, this introduced multiple (OS-specific) challenges that, after careful consideration, would greatly improve complexity. The solution builds to a single process that needs to run and is responsible for everything (divided into multiple domains) and the overall source code quantity is limited. As a tradeoff, this means that building or expanding the current solution will require to (re)compile and (re)deploy after each source code update.

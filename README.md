@@ -1,8 +1,10 @@
-# <img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Icon.png" width="64" height="64"> LUMOS Unified Mock Operating System
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Icon.png" width="64" height="64"> # LUMOS Unified Mock Operating System
 ![](https://github.com/jetspiking/LUMOS/blob/main/Readme/Boot.gif)
 
 # Description
 LUMOS is a mock operating system that can be utilized to limit a system to its purpose(s) to enhance the end-user experience. LUMOS can be deployed as a supplement for systems heavily relying on users opening or using specific tools on a Windows, Linux or MacOS machine.
+
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/VirtualBox.png" Width="400">
 
 # Installation
 Navigate to the releases tab, i.e. 

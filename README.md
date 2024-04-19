@@ -33,7 +33,7 @@ The application supports two alternative run modes by appending an argument for 
 
 Especially for ```--fsl``` modes it seems appropiate to automatically start the application on after the operating system has booted. This introduced a new edge-case where exiting the application upon maintenance or checks could prove problematic. As an alternative exit mode a terminal command ```LUMOS_EXIT``` was added. This will shutdown the application regardless of the launch argument.
 
-<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/LaptopFsl.png">
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/LaptopFsl.jpg">
 
 # Applications
 Two applications are included. A boot animation is added as an app ```Boot```, to display how the API can be used to continuously write updates for displaying the application. The second application is a terminal program ```Terminal``` that is a suitable example for showing lifecycle management related to opening, hiding or closing the application, and interfacing with an API unrelated to LUMOS.

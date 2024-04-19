@@ -23,6 +23,7 @@ If you are using ```Mac OS``` it might be reported that opening the application 
 The Linux application be started by performing:
 
 ```chmod +x LUMOS-lin-x64```
+
 ```./LUMOS-lin-x64```
 
 # Arguments

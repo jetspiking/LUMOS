@@ -4,9 +4,11 @@
 # Description
 LUMOS is a mock operating system that can be utilized to limit a system to its purpose(s) to enhance the end-user experience. LUMOS can be deployed as a supplement for systems heavily relying on users opening or using specific tools on a Windows, Linux or MacOS machine.
 
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/SoftKeyboardPortrait.png">
+
+# Overview
 <img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/VirtualBox.png">
 <img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/SoftKeyboardLandscape.png">
-<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/SoftKeyboardPortrait.png">
 
 # Installation
 Navigate to the releases tab, i.e. 

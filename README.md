@@ -43,9 +43,7 @@ Two applications are included. A boot animation is added as an app ```Boot```, t
 # Architecture
 Originally the idea was to create a microservices architecture communicating via IPC (Named Pipes) for higher maintainability. However, this introduced multiple (OS-specific) challenges that, after careful consideration, would greatly improve complexity. The solution builds to a single process, with a limited overall source code quantity. As a tradeoff, this means that building or expanding the current solution will require to (re)compile and (re)deploy after each source code update.
 
-The software is split-up into different domains based on their purpose. This is represented as folders inside the solution containing interfaces that can be used to communicate actions to the related logic.
-
-<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png" width="500">
+The software is split-up into different modules based on their purpose.
 
 | Module            | Description                 |
 | ----------------- | :-------------------------- |
@@ -57,10 +55,29 @@ The software is split-up into different domains based on their purpose. This is 
 | 🔔 Notification  | Status / notification bar   |
 | 🖥️ UICat         | UI-engine for displaying    |
 
+These modules are represented as folders inside the solution containing interfaces that can be used to communicate actions to the related logic.
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png" width="500">
+
 # Integrating
 A requirement for applying LUMOS is that the workflow can be automated by an API or DLL. By creativily calling your API or (CLI) tools in the LUMOS C#-backend you can integrate almost any back-end driven by user actions in the launcher. The front-end of LUMOS is build upon Avalonia UI and suitable for most applications limitedly relying on performance.
 
-Documentation will be added here on how to register your application inside the "launcher". The launcher is used to start your custom application(s).
+## Creating your application
+Create a new folder below the ```Apps``` module and add a class for your own project here. Your app should inherit from the ```LauncherApp``` base class. The quickest way to do this is by simply copying the ```Boot``` applications folder and renaming the copied class ```Boot.cs``` to your own project name. You can now adjust the ```_uuid```, ```_name``` and ```_icon``` to values appropiate for your app.
+
+## Registering your application
+The next step is to register your application, this is required for launcher to find and display it. This can be initiated by adjusting ```Lumos.cs```. The constructor contains the creation of a list ```launcherApps```. Add your new application to this list, as done for ```Boot``` and ```Terminal```.
+
+```
+Boot boot = new(_appManager as IDisplayManager);
+
+List<LauncherApp> launcherApps = new();
+launcherApps.Add(boot);
+launcherApps.Add(new Terminal(_appManager as IDisplayManager));
+
+boot.Start();
+```
+
+If you do not want to display your application in the launcher, you can refrain from adding the application to the list. Instead calling the method ```LauncherApp.Start()``` should suffice for immidiately displaying your application, regardless of inclusion in the launcher (as also done for the ```Boot``` application).
 
 # Thank you for using LUMOS
 If you enjoy this software series, you could consider supporting me by purchasing application [Colorpick - PRO](https://store.steampowered.com/app/1388790/Colorpick__PRO). For a few dollars (depending on Steam pricing in region) you receive a DRM-free Colorpick application.

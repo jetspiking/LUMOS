@@ -55,8 +55,7 @@ The software is split-up into different modules based on their purpose.
 | 🔔 Notification  | Status / notification bar   |
 | 🖥️ UICat         | UI-engine for displaying    |
 
-These modules are represented as folders inside the solution containing interfaces that can be used to communicate actions to the related logic.
-<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png" width="500">
+These modules are represented as folders inside the solution containing interfaces.
 
 # Integrating
 A requirement for applying LUMOS is that the workflow can be automated by an API or DLL. By creativily calling your API or (CLI) tools in the LUMOS C#-backend you can integrate almost any back-end driven by user actions in the launcher. The front-end of LUMOS is build upon Avalonia UI and suitable for most applications limitedly relying on performance.
@@ -78,6 +77,11 @@ boot.Start();
 ```
 
 If you do not want to display your application in the launcher, you can refrain from adding the application to the list. Instead calling the method ```LauncherApp.Start()``` should suffice for immidiately displaying your application, regardless of inclusion in the launcher (as also done for the ```Boot``` application).
+
+## Adding or adjusting functionality
+To adjust behaviour the interfaces relating to modules can be adjusted or expanded. Some interfaces used to communicate actions to modules are displayed in the diagram below.
+
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png" width="500">
 
 # Thank you for using LUMOS
 If you enjoy this software series, you could consider supporting me by purchasing application [Colorpick - PRO](https://store.steampowered.com/app/1388790/Colorpick__PRO). For a few dollars (depending on Steam pricing in region) you receive a DRM-free Colorpick application.

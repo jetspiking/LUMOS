@@ -2,7 +2,7 @@
 ![](https://github.com/jetspiking/LUMOS/blob/main/Design/Cosmetic/Animation/Boot.gif)
 
 # Description
-LUMOS is a mock operating system that can be utilized to limit a system to its purpose(s) to enhance the end-user experience. LUMOS can be deployed as a supplement for systems heavily relying on users opening or using specific tools on a Windows, Linux or MacOS machine. A requirement for applying LUMOS is that the workflow can be automated by an API or DLL. Ideally this API would be in C#. However, by creativily calling your API or (CLI) tools in the LUMOS C#-backend.
+LUMOS is a mock operating system that can be utilized to limit a system to its purpose(s) to enhance the end-user experience. LUMOS can be deployed as a supplement for systems heavily relying on users opening or using specific tools on a Windows, Linux or MacOS machine.
 
 # Installation
 Navigate to the releases tab, i.e. 
@@ -37,6 +37,8 @@ Originally the idea was to create a microservices architecture communicating via
 Information regarding the architecture and especially relevant information for expanding, adjusting or maintaining the solution will be added here.
 
 # Documentation
+A requirement for applying LUMOS is that the workflow can be automated by an API or DLL. Ideally this API would be in C#. However, by creativily calling your API or (CLI) tools in the LUMOS C#-backend you can integrate any back-end in the launcher. The front-end of LUMOS is build upon Avalonia UI and suitable for most applications limitedly relying on performance.
+
 Documentation will be added here on how to register your application inside the "launcher". The launcher is used to start your custom application(s).
 
 # Thank you for using LUMOS

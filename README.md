@@ -43,7 +43,9 @@ Two applications are included. A boot animation is added as an app ```Boot```, t
 # Architecture
 Originally the idea was to create a microservices architecture communicating via IPC (Named Pipes) for higher maintainability. However, this introduced multiple (OS-specific) challenges that, after careful consideration, would greatly improve complexity. The solution builds to a single process, with a limited overall source code quantity. As a tradeoff, this means that building or expanding the current solution will require to (re)compile and (re)deploy after each source code update.
 
-Information regarding the architecture and especially relevant information for expanding, adjusting or maintaining the solution will be added here.
+The software is split-up into different domains based on their purpose. This is represented as folders inside the solution containing interfaces that can be used to communicate actions to the related logic.
+
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png">
 
 # Integrating
 A requirement for applying LUMOS is that the workflow can be automated by an API or DLL. By creativily calling your API or (CLI) tools in the LUMOS C#-backend you can integrate almost any back-end driven by user actions in the launcher. The front-end of LUMOS is build upon Avalonia UI and suitable for most applications limitedly relying on performance.

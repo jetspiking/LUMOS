@@ -13,7 +13,7 @@ LUMOS is a mock operating system that can be utilized to limit a system to its p
 Navigate to the releases tab, i.e. 
 [Releases](https://github.com/jetspiking/LUMOS/releases)
 
-From here you can download Roblocks for ```Mac OS```, ```Windows```, ```Linux```.
+From here you can download LUMOS for ```Mac OS```, ```Windows```, ```Linux```.
 Launch the executable to display LUMOS, it should work out of the box. 
 
 If you are using ```Mac OS``` it might be reported that opening the application is not possible, due to not having the permissions or the binary would be corrupt. This can be resolved by opening terminal and executing the following command: 

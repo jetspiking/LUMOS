@@ -45,7 +45,7 @@ Originally the idea was to create a microservices architecture communicating via
 
 The software is split-up into different domains based on their purpose. This is represented as folders inside the solution containing interfaces that can be used to communicate actions to the related logic.
 
-<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png">
+<img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png" width="500">
 
 # Integrating
 A requirement for applying LUMOS is that the workflow can be automated by an API or DLL. By creativily calling your API or (CLI) tools in the LUMOS C#-backend you can integrate almost any back-end driven by user actions in the launcher. The front-end of LUMOS is build upon Avalonia UI and suitable for most applications limitedly relying on performance.

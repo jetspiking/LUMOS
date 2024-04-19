@@ -48,8 +48,8 @@ The software is split-up into different domains based on their purpose. This is 
 <img src="https://raw.githubusercontent.com/jetspiking/LUMOS/main/Readme/Architecture.png" width="500">
 
 | Module            | Description                 |
-| ----------------- | --------------------------: |
-| 📱 Apps          | (Launcher) apps             |
+| ----------------- | :-------------------------- |
+| 📱 Apps          | Launcher apps               |
 | 🗂️ Assets        | Resources                   |
 | ⌨️ Keyboard      | Soft-keyboard for input     |
 | ❤️ Liv           | Lifecycle management        |
